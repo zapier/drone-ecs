@@ -226,5 +226,6 @@ func run(c *cli.Context) error {
 		HealthCheckStartPeriod:  c.Int64("healthcheck-start-period"),
 		HealthCheckTimeout:      c.Int64("healthcheck-timeout"),
 	}
+	fmt.Println("Desired count is ", plugin.DesiredCount)
 	return plugin.Exec()
 }
