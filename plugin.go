@@ -81,10 +81,8 @@ func (p *Plugin) Exec() error {
 		Name:         aws.String(p.ContainerName),
 		PortMappings: []*ecs.PortMapping{},
 
-		Ulimits: []*ecs.Ulimit{},
-		//User: aws.String("String"),
+		Ulimits:     []*ecs.Ulimit{},
 		VolumesFrom: []*ecs.VolumeFrom{},
-		//WorkingDirectory: aws.String("String"),
 	}
 
 	datadogDefinition := ecs.ContainerDefinition{
@@ -110,28 +108,26 @@ func (p *Plugin) Exec() error {
 		Name:         aws.String("datadog-agent"),
 		PortMappings: []*ecs.PortMapping{},
 
-		Ulimits: []*ecs.Ulimit{},
-		//User: aws.String("String"),
+		Ulimits:     []*ecs.Ulimit{},
 		VolumesFrom: []*ecs.VolumeFrom{},
-		//WorkingDirectory: aws.String("String"),
-
-		Cpu:               aws.Int64(256),
-		Memory:            aws.Int64(512),
-		MemoryReservation: aws.Int64(512),
 	}
 
 	if p.CPU != 0 {
 		definition.Cpu = aws.Int64(p.CPU)
+		datadogDefinition.Cpu = aws.Int64(p.CPU)
 	}
 
 	if p.Memory == 0 && p.MemoryReservation == 0 {
 		definition.MemoryReservation = aws.Int64(128)
+		datadogDefinition.MemoryReservation = aws.Int64(128)
 	} else {
 		if p.Memory != 0 {
 			definition.Memory = aws.Int64(p.Memory)
+			datadogDefinition.Memory = aws.Int64(p.Memory)
 		}
 		if p.MemoryReservation != 0 {
 			definition.MemoryReservation = aws.Int64(p.MemoryReservation)
+			datadogDefinition.MemoryReservation = aws.Int64(p.MemoryReservation)
 		}
 	}
 

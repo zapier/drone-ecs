@@ -2,7 +2,31 @@
 
 
 [[projects]]
-  digest = "1:dfc383b6e598769e516afb07a221ca50314f902e95e739509377937442fd7f65"
+  branch = "2.x"
+  digest = "1:5fb9305900d6f7c94d6f663880185504bb0ac9b149d02f73966a31ed04000ebb"
+  name = "github.com/Masterminds/semver"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "3c92f33da7a84de8314f3ff82e5f919b89fd1492"
+
+[[projects]]
+  digest = "1:e8e97d3c5df6c44e650dbf87090ad7cba352415574067214c2f0ff8964c43869"
+  name = "github.com/Masterminds/vcs"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "6f1c6d150500e452704e9863f68c2559f58616bf"
+  version = "v1.12.0"
+
+[[projects]]
+  digest = "1:c47f4964978e211c6e566596ec6246c329912ea92e9bb99c00798bb4564c5b09"
+  name = "github.com/armon/go-radix"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "1a2de0c21c94309923825da3df33a4381872c795"
+  version = "v1.0.0"
+
+[[projects]]
+  digest = "1:ef73d176f82f69353eb03edb4e86f0e321738575ef6226429d2f717781a2b731"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -15,6 +39,7 @@
     "aws/credentials/ec2rolecreds",
     "aws/credentials/endpointcreds",
     "aws/credentials/stscreds",
+    "aws/csm",
     "aws/defaults",
     "aws/ec2metadata",
     "aws/endpoints",
@@ -23,6 +48,7 @@
     "aws/signer/v4",
     "internal/sdkio",
     "internal/sdkrand",
+    "internal/sdkuri",
     "internal/shareddefaults",
     "private/protocol",
     "private/protocol/json/jsonutil",
@@ -35,16 +61,69 @@
     "service/sts",
   ]
   pruneopts = "UT"
-  revision = "854f9d07a932452f1552955e127e50ba5ebb25cc"
-  version = "v1.13.56"
+  revision = "71a2a92b0063297b055b6f5a014d441c142da2ce"
+  version = "v1.15.32"
 
 [[projects]]
-  digest = "1:fb46255681497314debedde38b64be32a75bae50bad107586c22f1662bf2d352"
+  digest = "1:0f98f59e9a2f4070d66f0c9c39561f68fcd1dc837b22a852d28d0003aebd1b1e"
+  name = "github.com/boltdb/bolt"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "2f1ce7a837dcb8da3ec595b1dac9d0632f0f99e8"
+  version = "v1.3.1"
+
+[[projects]]
+  digest = "1:5abd6a22805b1919f6a6bca0ae58b13cef1f3412812f38569978f43ef02743d4"
   name = "github.com/go-ini/ini"
   packages = ["."]
   pruneopts = "UT"
-  revision = "06f5f3d67269ccec1fe5fe4134ba6e982984f7f5"
-  version = "v1.37.0"
+  revision = "5cf292cae48347c2490ac1a58fe36735fb78df7e"
+  version = "v1.38.2"
+
+[[projects]]
+  digest = "1:20b968c62e8380dd8a74408ea2d7c406cd9626622f60d1bfb8dfcbd1cf7f6998"
+  name = "github.com/golang/dep"
+  packages = [
+    ".",
+    "gps",
+    "gps/internal/pb",
+    "gps/paths",
+    "gps/pkgtree",
+    "gps/verify",
+    "internal/feedback",
+    "internal/fs",
+    "internal/importers",
+    "internal/importers/base",
+    "internal/importers/glide",
+    "internal/importers/glock",
+    "internal/importers/godep",
+    "internal/importers/govend",
+    "internal/importers/govendor",
+    "internal/importers/gvt",
+    "internal/importers/importertest",
+    "internal/importers/vndr",
+    "internal/test",
+    "internal/test/integration",
+  ]
+  pruneopts = "UT"
+  revision = "224a564abe296670b692fe08bb63a3e4c4ad7978"
+  version = "v0.5.0"
+
+[[projects]]
+  digest = "1:97df918963298c287643883209a2c3f642e6593379f97ab400c2a2e219ab647d"
+  name = "github.com/golang/protobuf"
+  packages = ["proto"]
+  pruneopts = "UT"
+  revision = "aa810b61a9c79d51363740d207bb46cf8e620ed5"
+  version = "v1.2.0"
+
+[[projects]]
+  digest = "1:dcb3e2ad17349c0cc89ffc16692d05195e6a67b4924fe81760fba9a307a7271d"
+  name = "github.com/jmank88/nuts"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "8b28145dffc87104e66d074f62ea8080edfad7c8"
+  version = "v0.3.0"
 
 [[projects]]
   digest = "1:e22af8c7518e1eab6f2eab2b7d7558927f816262586cd6ed9f349c97a6c285c4"
@@ -54,6 +133,38 @@
   revision = "0b12d6b5"
 
 [[projects]]
+  branch = "master"
+  digest = "1:6491080aa184f88c2bb8e2f6056e5e0e9a578b2d8666efbd6e97bc37a0c41e72"
+  name = "github.com/nightlyone/lockfile"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "0ad87eef1443f64d3d8c50da647e2b1552851124"
+
+[[projects]]
+  digest = "1:95741de3af260a92cc5c7f3f3061e85273f5a81b5db20d4bd68da74bd521675e"
+  name = "github.com/pelletier/go-toml"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "c01d1270ff3e442a8a57cddc1c92dc1138598194"
+  version = "v1.2.0"
+
+[[projects]]
+  digest = "1:40e195917a951a8bf867cd05de2a46aaf1806c50cf92eebf4c16f78cd196f747"
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
+  version = "v0.8.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:3b2f0fcb35e10e0f7845f2182e4dd22f5a6fe3db5d1044ca815d646992a2444f"
+  name = "github.com/sdboyer/constext"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "836a144573533ea4da4e6929c235fd348aed1c80"
+
+[[projects]]
   digest = "1:b24d38b282bacf9791408a080f606370efa3d364e4b5fd9ba0f7b87786d3b679"
   name = "github.com/urfave/cli"
   packages = ["."]
@@ -61,15 +172,79 @@
   revision = "cfb38830724cc34fedffe9a2a29fb54fa9169cd1"
   version = "v1.20.0"
 
+[[projects]]
+  branch = "master"
+  digest = "1:76ee51c3f468493aff39dbacc401e8831fbb765104cbf613b89bef01cf4bad70"
+  name = "golang.org/x/net"
+  packages = ["context"]
+  pruneopts = "UT"
+  revision = "161cd47e91fd58ac17490ef4d742dc98bb4cf60e"
+
+[[projects]]
+  branch = "master"
+  digest = "1:39ebcc2b11457b703ae9ee2e8cca0f68df21969c6102cb3b705f76cca0ea0239"
+  name = "golang.org/x/sync"
+  packages = ["errgroup"]
+  pruneopts = "UT"
+  revision = "1d60e4601c6fd243af51cc01ddf169918a5407ca"
+
+[[projects]]
+  branch = "master"
+  digest = "1:6eb2645d74b43d9c87b51947df39f7c668a4f422cd512053f7f6f75bfaad0197"
+  name = "golang.org/x/sys"
+  packages = ["unix"]
+  pruneopts = "UT"
+  revision = "d0be0721c37eeb5299f245a996a483160fc36940"
+
+[[projects]]
+  digest = "1:342378ac4dcb378a5448dd723f0784ae519383532f5e70ade24132c4c8693202"
+  name = "gopkg.in/yaml.v2"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "5420a8b6744d3b0345ab293f6fcba19c978f1183"
+  version = "v2.2.1"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/Masterminds/semver",
+    "github.com/Masterminds/vcs",
+    "github.com/armon/go-radix",
     "github.com/aws/aws-sdk-go/aws",
     "github.com/aws/aws-sdk-go/aws/credentials",
     "github.com/aws/aws-sdk-go/aws/session",
     "github.com/aws/aws-sdk-go/service/ecs",
+    "github.com/boltdb/bolt",
+    "github.com/golang/dep",
+    "github.com/golang/dep/gps",
+    "github.com/golang/dep/gps/internal/pb",
+    "github.com/golang/dep/gps/paths",
+    "github.com/golang/dep/gps/pkgtree",
+    "github.com/golang/dep/gps/verify",
+    "github.com/golang/dep/internal/feedback",
+    "github.com/golang/dep/internal/fs",
+    "github.com/golang/dep/internal/importers",
+    "github.com/golang/dep/internal/importers/base",
+    "github.com/golang/dep/internal/importers/glide",
+    "github.com/golang/dep/internal/importers/glock",
+    "github.com/golang/dep/internal/importers/godep",
+    "github.com/golang/dep/internal/importers/govend",
+    "github.com/golang/dep/internal/importers/govendor",
+    "github.com/golang/dep/internal/importers/gvt",
+    "github.com/golang/dep/internal/importers/importertest",
+    "github.com/golang/dep/internal/importers/vndr",
+    "github.com/golang/dep/internal/test",
+    "github.com/golang/dep/internal/test/integration",
+    "github.com/golang/protobuf/proto",
+    "github.com/jmank88/nuts",
+    "github.com/nightlyone/lockfile",
+    "github.com/pelletier/go-toml",
+    "github.com/pkg/errors",
+    "github.com/sdboyer/constext",
     "github.com/urfave/cli",
+    "golang.org/x/sync/errgroup",
+    "gopkg.in/yaml.v2",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
